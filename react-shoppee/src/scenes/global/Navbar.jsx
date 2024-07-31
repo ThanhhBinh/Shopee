@@ -9,6 +9,11 @@ export default function Navbar() {
                             Menu
                         </a>
                     </li>
+                    <li classname="header__menu-item">
+                        <a classname="nav-link" href="a">
+                            Menu
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
