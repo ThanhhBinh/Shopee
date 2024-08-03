@@ -4,14 +4,29 @@ export default function Navbar() {
         <div className="header_menu">
             <nav>
                 <ul id="nav" className="header__menu-list">
-                    <li classname="header__menu-item">
-                        <a classname="nav-link" href="a">
-                            Menu
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Menu 1
                         </a>
                     </li>
-                    <li classname="header__menu-item">
-                        <a classname="nav-link" href="a">
-                            Menu
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Menu 2
+                        </a>
+                    </li>
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Menu 2
+                        </a>
+                    </li>
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Menu 2
+                        </a>
+                    </li>
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Menu 2
                         </a>
                     </li>
                 </ul>
