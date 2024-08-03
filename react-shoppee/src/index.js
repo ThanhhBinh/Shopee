@@ -53,6 +53,10 @@ const router = createBrowserRouter([
                 element: <Checkout />,
             },
             {
+                path: "confirmation",
+                element: <Confirmation />,
+            },
+            {
                 path: "checkout/success",
                 element: <Confirmation />,
             },

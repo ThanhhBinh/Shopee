@@ -8,7 +8,7 @@ import Footer from "./scenes/global/Footer";
 import { Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./state/store";
-import ProductList from "./scenes/productList/ProductList";
+
 import OtherFooter from "./scenes/global/OtherFooter";
 
 export default function App() {
@@ -27,7 +27,6 @@ export default function App() {
                         </div>
                     </header>
                     {/* container */}
-                    <ProductList />
                     <Outlet />
                     {/* footer */}
                     <footer className="footer">
