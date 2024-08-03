@@ -245,7 +245,7 @@ export default function checkout() {
                 <div className="shopee">
                     <div>
                         <section className="cart-page-header-wrapper container-wrapper">
-                            <div className="container">
+                            <div className="container-p">
                                 <div
                                     style={{
                                         display: "flex",
@@ -322,7 +322,7 @@ export default function checkout() {
                 </div>
             </header>
             <div className="cart-container">
-                <div className="container container-carts">
+                <div className="container-p container-carts">
                     <div className="Notification-cart">
                         <img
                             className="img-notification-freeship"

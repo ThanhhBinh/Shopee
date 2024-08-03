@@ -21,41 +21,45 @@ export default function confirmation() {
                                 <img
                                     src="../assets/img/qr/qr-code.png"
                                     className="header__qr"
+                                    alt=""
                                 />
                                 <div className="header__apps">
-                                    <a href="#" className="header__app-link">
+                                    <a href="a" className="header__app-link">
                                         <img
                                             src="../assets/img/qr/app-store.png"
                                             className="header__app-img"
+                                            alt=""
                                         />
                                     </a>
-                                    <a href="#" className="header__app-link">
+                                    <a href="a" className="header__app-link">
                                         <img
                                             src="../assets/img/qr/gg-play.png"
                                             className="header__app-img"
+                                            alt=""
                                         />
                                     </a>
-                                    <a href="#" className="header__app-link">
+                                    <a href="a" className="header__app-link">
                                         <img
                                             src="../assets/img/qr/app-gallery.png"
                                             className="header__app-img"
+                                            alt=""
                                         />
                                     </a>
                                 </div>
                             </div>
                             <li className="header__nav-item">
                                 Kết nối
-                                <a href="#" className="header__nav-icon-link">
+                                <a href="a" className="header__nav-icon-link">
                                     <i className="header__nav-icon fab fa-facebook" />
                                 </a>
-                                <a href="#" className="header__nav-icon-link">
+                                <a href="a" className="header__nav-icon-link">
                                     <i className="header__nav-icon fab fa-instagram" />
                                 </a>
                             </li>
                         </ul>
                         <ul className="header__nav-list">
                             <li className="header__nav-item header__show-note">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     <i className="header__nav-icon far fa-bell" />
                                     Thông báo
                                 </a>
@@ -67,7 +71,7 @@ export default function confirmation() {
                                     <ul className="header__notifi-list">
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
@@ -88,7 +92,7 @@ export default function confirmation() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
@@ -110,7 +114,7 @@ export default function confirmation() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
@@ -132,7 +136,7 @@ export default function confirmation() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
@@ -154,7 +158,7 @@ export default function confirmation() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
@@ -178,7 +182,7 @@ export default function confirmation() {
                                     </ul>
                                     <footer className="header__notifi-footer">
                                         <a
-                                            href="#"
+                                            href="a"
                                             className="header__notifi-footer-btn"
                                         >
                                             Xem tất cả
@@ -187,33 +191,33 @@ export default function confirmation() {
                                 </div>
                             </li>
                             <li className="header__nav-item">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     <i className="header__nav-icon far fa-question-circle" />
                                     Hỗ trợ
                                 </a>
                             </li>
                             <li className="header__nav-item header__nav-item--bold header__nav-item--separate">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     Đăng ký
                                 </a>
                             </li>
                             <li className="header__nav-item header__nav-item--bold">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     Đăng nhập
                                 </a>
                             </li>
                             {/* <li class="header__nav-item header__nav-user">
                       <img src="img/user.png" class="header__nav-user-avt">
-                      <a href="#" class="header__nav-item-link header__nav-item--bold">Lục Thiên Phong</a>
+                      <a href="a" class="header__nav-item-link header__nav-item--bold">Lục Thiên Phong</a>
                       <ul class="header__nav-user-menu">
                           <li class="header__nav-user-item">
-                              <a href="#">Tài khoản của tôi</a>
+                              <a href="a">Tài khoản của tôi</a>
                           </li>
                           <li class="header__nav-user-item">
-                              <a href="#">Đơn mua</a>
+                              <a href="a">Đơn mua</a>
                           </li>
                           <li class="header__nav-user-item">
-                              <a href="#">Đăng xuất</a>
+                              <a href="a">Đăng xuất</a>
                           </li>
                       </ul>
                   </li> */}
@@ -222,22 +226,22 @@ export default function confirmation() {
                 </div>
                 <ul className="header__sort-bar">
                     <li className="header__sort-item">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Liên quan
                         </a>
                     </li>
                     <li className="header__sort-item header__sort-item--active">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Mới nhất
                         </a>
                     </li>
                     <li className="header__sort-item">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Bán chạy
                         </a>
                     </li>
                     <li className="header__sort-item">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Giá
                         </a>
                     </li>
@@ -246,7 +250,7 @@ export default function confirmation() {
             <div className="shopee">
                 <div>
                     <section className="cart-page-header-wrapper container-wrapper">
-                        <div className="container">
+                        <div className="container-p">
                             <div
                                 style={{
                                     display: "flex",
