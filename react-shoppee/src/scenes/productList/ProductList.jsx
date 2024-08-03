@@ -3,6 +3,7 @@ import ProductBox from "../../components/ProductBox";
 import CategoryMenu from "./CategoryMenu";
 import Filter from "./Filter";
 import Paginate from "../../components/Paginate";
+
 export default function ProductList() {
     return (
         <div className="container">

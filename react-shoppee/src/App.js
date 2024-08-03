@@ -8,9 +8,7 @@ import Footer from "./scenes/global/Footer";
 import { Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./state/store";
-
 import OtherFooter from "./scenes/global/OtherFooter";
-
 export default function App() {
     return (
         <div>
@@ -26,21 +24,14 @@ export default function App() {
                             <Navbar />
                         </div>
                     </header>
-                    {/* container */}
                     <Outlet />
-                    {/* footer */}
                     <footer className="footer">
-                        {/* main footer */}
                         <div className="main-footer">
                             <div className="grid wide">
-                                {/* footer */}
                                 <Footer />
-                                {/*import coppy right footer */}
                                 <CoppyRight />
                             </div>
                         </div>
-
-                        {/* import other footer */}
                         <OtherFooter />
                     </footer>
                 </div>
