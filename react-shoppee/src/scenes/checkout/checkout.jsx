@@ -594,7 +594,7 @@ export default function checkout() {
                 </div>
             </div>
             <div className="cart-container">
-                <div className="container container-carts">
+                <div className="container-p container-carts">
                     <section className="shop-section-cart">
                         <div className="shop-container-cart">
                             <div className="shop-header-cart">

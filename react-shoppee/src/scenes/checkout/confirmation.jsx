@@ -326,7 +326,7 @@ export default function confirmation() {
                 </div>
             </div>
             <div className="main-container">
-                <div className="pay-container container">
+                <div className="pay-container container-p">
                     <div className="xBNaac" />
                     <div className="address-container">
                         <div className="address-content">
@@ -617,7 +617,7 @@ export default function confirmation() {
                 </div>
             </div>
             <div className="main-container">
-                <div className="pay-container container">
+                <div className="pay-container container-p">
                     <div className="product-container-pay">
                         <div className="seller-container">
                             <div className="badge-container">
@@ -851,7 +851,7 @@ export default function confirmation() {
                 </div>
             </div>
             <div className="main-container ">
-                <div className="container">
+                <div className="container-p">
                     <div className="voucher-container-shop ">
                         <div className="voucher-shop-pay">
                             <div className="voucher-icon-container-shop-pay">
@@ -916,7 +916,7 @@ export default function confirmation() {
                 </div>
             </div>
             <div className="main-container">
-                <div className="container">
+                <div className="container-p">
                     <div className="payment-method-container">
                         <div className="payment-method-header">
                             <h2 className="visually-hidden">
