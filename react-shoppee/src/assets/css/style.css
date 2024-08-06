@@ -2936,6 +2936,9 @@ border-color: red green blue yellow */
 .agreement-button {
     text-align: end;
 }
+.agreement-button a {
+    color: #fff;
+}
 .total-amount {
     color: #ff5722;
     font-size: 16px;
@@ -3287,7 +3290,6 @@ border-color: red green blue yellow */
     font-weight: 400;
 }
 
-<<<<<<< HEAD
 .spanall {
     color: var(--light-btn-primary-color);
 }
@@ -3752,7 +3754,7 @@ user agent stylesheet a:-webkit-any-link {
     -moz-user-select: none;
     user-select: none;
     padding: 0 5px;
-=======
+}
 /* user profile */
 .profile-header {
     padding: 20px 0;
@@ -4768,5 +4770,10 @@ user agent stylesheet a:-webkit-any-link {
 
 .find-voucher-text {
     font-weight: bold;
->>>>>>> origin/main
+}
+.akjsfsa {
+    color: #fff;
+}
+.secondary a {
+    color: #111;
 }
