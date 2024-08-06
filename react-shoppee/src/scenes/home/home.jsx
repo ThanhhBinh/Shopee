@@ -17,13 +17,17 @@ export default function Home() {
                 <div className="container">
                     <div className="grid wide">
                         <div className="row sm-gutter">
-                            <img src="./assets/img/home/free.png" alt="free" />
+                            <img
+                                style={{ width: "100%" }}
+                                src="./assets/img/home/free.png"
+                                alt="free"
+                            />
                         </div>
                         <HomeCategory />
                         <Flashsale />
-                        <HomeProduct />
                         <HomeProductNew />
-                        <ProductList />
+                        <HomeProduct />
+                        {/* <ProductList /> */}
                     </div>
                 </div>
             </div>

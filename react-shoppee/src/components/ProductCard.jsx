@@ -1,7 +1,7 @@
 import React from "react";
 export default function Product() {
     return (
-        <div className="col l-2-4 m-3 c-6 home-product-item">
+        <div className="col l-2 m-3 c-6 home-product-item">
             <a className="home-product-item-link" href="https://example.com">
                 <div
                     className="home-product-item__img"
