@@ -21,41 +21,45 @@ export default function checkout() {
                                 <img
                                     src="img/qr/qr-code.png"
                                     className="header__qr"
+                                    alt=""
                                 />
                                 <div className="header__apps">
-                                    <a href="#" className="header__app-link">
+                                    <a href="a" className="header__app-link">
                                         <img
                                             src="img/qr/app-store.png"
                                             className="header__app-img"
+                                            alt=""
                                         />
                                     </a>
-                                    <a href="#" className="header__app-link">
+                                    <a href="a" className="header__app-link">
                                         <img
                                             src="img/qr/gg-play.png"
                                             className="header__app-img"
+                                            alt=""
                                         />
                                     </a>
-                                    <a href="#" className="header__app-link">
+                                    <a href="a" className="header__app-link">
                                         <img
                                             src="img/qr/app-gallery.png"
                                             className="header__app-img"
+                                            alt=""
                                         />
                                     </a>
                                 </div>
                             </div>
                             <li className="header__nav-item">
                                 Kết nối
-                                <a href="#" className="header__nav-icon-link">
+                                <a href="a" className="header__nav-icon-link">
                                     <i className="header__nav-icon fab fa-facebook" />
                                 </a>
-                                <a href="#" className="header__nav-icon-link">
+                                <a href="a" className="header__nav-icon-link">
                                     <i className="header__nav-icon fab fa-instagram" />
                                 </a>
                             </li>
                         </ul>
                         <ul className="header__nav-list">
                             <li className="header__nav-item header__show-note">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     <i className="header__nav-icon far fa-bell" />
                                     Thông báo
                                 </a>
@@ -67,12 +71,13 @@ export default function checkout() {
                                     <ul className="header__notifi-list">
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
                                                     src="img/sp/casio.png"
                                                     className="header__notifi-img"
+                                                    alt=""
                                                 />
                                                 <div className="header__notifi-info">
                                                     <div className="header__notifi-name">
@@ -88,12 +93,13 @@ export default function checkout() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
                                                     src="img/sp/iphone.png"
                                                     className="header__notifi-img"
+                                                    alt=""
                                                 />
                                                 <div className="header__notifi-info">
                                                     <div className="header__notifi-name">
@@ -110,12 +116,13 @@ export default function checkout() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
                                                     src="img/sp/iphone2.png"
                                                     className="header__notifi-img"
+                                                    alt=""
                                                 />
                                                 <div className="header__notifi-info">
                                                     <div className="header__notifi-name">
@@ -132,12 +139,13 @@ export default function checkout() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
                                                     src="img/sp/laptop.png"
                                                     className="header__notifi-img"
+                                                    alt=""
                                                 />
                                                 <div className="header__notifi-info">
                                                     <div className="header__notifi-name">
@@ -154,12 +162,13 @@ export default function checkout() {
                                         </li>
                                         <li className="header__notifi-item">
                                             <a
-                                                href="#"
+                                                href="a"
                                                 className="header__notifi-link"
                                             >
                                                 <img
                                                     src="img/sp/laptop2.png"
                                                     className="header__notifi-img"
+                                                    alt=""
                                                 />
                                                 <div className="header__notifi-info">
                                                     <div className="header__notifi-name">
@@ -178,7 +187,7 @@ export default function checkout() {
                                     </ul>
                                     <footer className="header__notifi-footer">
                                         <a
-                                            href="#"
+                                            href="a"
                                             className="header__notifi-footer-btn"
                                         >
                                             Xem tất cả
@@ -187,18 +196,18 @@ export default function checkout() {
                                 </div>
                             </li>
                             <li className="header__nav-item">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     <i className="header__nav-icon far fa-question-circle" />
                                     Hỗ trợ
                                 </a>
                             </li>
                             <li className="header__nav-item header__nav-item--bold header__nav-item--separate">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     Đăng ký
                                 </a>
                             </li>
                             <li className="header__nav-item header__nav-item--bold">
-                                <a href="#" className="header__nav-item-link">
+                                <a href="a" className="header__nav-item-link">
                                     Đăng nhập
                                 </a>
                             </li>
@@ -222,22 +231,22 @@ export default function checkout() {
                 </div>
                 <ul className="header__sort-bar">
                     <li className="header__sort-item">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Liên quan
                         </a>
                     </li>
                     <li className="header__sort-item header__sort-item--active">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Mới nhất
                         </a>
                     </li>
                     <li className="header__sort-item">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Bán chạy
                         </a>
                     </li>
                     <li className="header__sort-item">
-                        <a href="#" className="header__sort-link">
+                        <a href="a" className="header__sort-link">
                             Giá
                         </a>
                     </li>
@@ -257,6 +266,7 @@ export default function checkout() {
                                             <img
                                                 src="../assets/img/logo/shopee-logo1.png"
                                                 className="header__logo-img"
+                                                alt=""
                                             />
                                             <div className="cart-page-logo__page-name">
                                                 Giỏ hàng
@@ -919,9 +929,14 @@ export default function checkout() {
                                     <div className="summary-amount">₫0</div>
                                 </div>
                             </div>
-                            <button className="checkout-btn">
-                                <span className="checkout-text">Mua hàng</span>
-                            </button>
+                            <a href="confirmation">
+                                {" "}
+                                <button className="checkout-btn">
+                                    <span className="checkout-text">
+                                        Mua hàng
+                                    </span>
+                                </button>
+                            </a>
                         </div>
                     </section>
                     <div className="shopee-header-section shopee-header-section--simpl">

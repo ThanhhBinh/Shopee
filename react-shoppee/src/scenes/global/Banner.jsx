@@ -69,7 +69,9 @@ export default function Banner() {
             {/* header__cart--no-cart */}
             {/* header__cart--has-cart */}
             <div className="header__cart header__cart--has-cart">
-                <i className="header__cart-icon fas fa-shopping-cart" />
+                <a href="checkout">
+                    <i className="header__cart-icon fas fa-shopping-cart" />
+                </a>
                 <div className="header__cart-count">4</div>
                 <div className="header__cart-list no-cart">
                     <img
@@ -293,7 +295,7 @@ export default function Banner() {
                     </ul>
                     <div className="header__cart-footer">
                         <a
-                            href="https://example.com"
+                            href="checkout"
                             className="btn btn--primary header__cart-see-cart"
                         >
                             Xem giỏ hàng

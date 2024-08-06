@@ -16,6 +16,18 @@ import ProductDetail from "./scenes/productDetail/ProductDetail";
 import Checkout from "./scenes/checkout/checkout";
 import Confirmation from "./scenes/checkout/confirmation";
 import CartMenu from "./scenes/global/CartMenu";
+import Purchase from "./scenes/user/purchase";
+import NotificationOrder from "./scenes/user/NotificationOrder";
+import NotificationPromotion from "./scenes/user/NotificationsPromotion";
+import NotificationWallet from "./scenes/user/NotificationWallet";
+import NotificationShopee from "./scenes/user/NotificationsShopee";
+import VoucherWallet from "./scenes/user/VouchersWallet";
+import Profile from "./scenes/user/account/profile";
+import Payment from "./scenes/user/account/payment";
+import Address from "./scenes/user/account/address";
+import Password from "./scenes/user/account/password";
+import Notification from "./scenes/user/setting/notification";
+import Privacy from "./scenes/user/setting/privacy";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -57,16 +69,65 @@ const router = createBrowserRouter([
                 element: <Confirmation />,
             },
             {
-                path: "checkout/success",
+                path: "success",
                 element: <Confirmation />,
             },
             {
                 path: "cart",
                 element: <CartMenu />,
             },
+            {
+                path: "purchase",
+                element: <Purchase />,
+            },
+            {
+                path: "profile",
+                element: <Profile />,
+            },
+            {
+                path: "payment",
+                element: <Payment />,
+            },
+            {
+                path: "address",
+                element: <Address />,
+            },
+            {
+                path: "password",
+                element: <Password />,
+            },
+            {
+                path: "notification",
+                element: <Notification />,
+            },
+            {
+                path: "privacy",
+                element: <Privacy />,
+            },
+            {
+                path: "notificationOrder",
+                element: <NotificationOrder />,
+            },
+            {
+                path: "notificationPromotion",
+                element: <NotificationPromotion />,
+            },
+            {
+                path: "notificationWallet",
+                element: <NotificationWallet />,
+            },
+            {
+                path: "notificationShopee",
+                element: <NotificationShopee />,
+            },
+            {
+                path: "voucherWallet",
+                element: <VoucherWallet />,
+            },
         ],
     },
 ]);
+
 root.render(
     <React.StrictMode>
         <Provider store={store}>

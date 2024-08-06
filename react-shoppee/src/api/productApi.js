@@ -1,12 +1,15 @@
-import { axiosInstance } from "./axiosInstance";
+import axiosClient from "./axiosClient";
 
-export const productApi = {
-    getAll(params) {
-        var url = "/products";
-        return axiosInstance.get(url, { params });
+const productApi = {
+    getAll: (params) => {
+        const url = "/products";
+        return axiosClient.get(url, { params });
     },
-    get(id, params) {
-        var url = `/products/${id}`;
-        return axiosInstance.get(url, { params });
+
+    get: (id) => {
+        const url = `/products/${id}`;
+        return axiosClient.get(url);
     },
 };
+
+export default productApi;
