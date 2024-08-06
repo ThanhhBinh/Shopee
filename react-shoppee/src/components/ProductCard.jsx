@@ -1,8 +1,13 @@
 import React from "react";
 export default function Product() {
     return (
+<<<<<<< HEAD
         <div className="col l-2 m-3 c-6 home-product-item">
             <a className="home-product-item-link" href="https://example.com">
+=======
+        <div className="col l-2-4 m-3 c-6 home-product-item">
+            <a className="home-product-item-link" href="product/2">
+>>>>>>> origin/main
                 <div
                     className="home-product-item__img"
                     style={{

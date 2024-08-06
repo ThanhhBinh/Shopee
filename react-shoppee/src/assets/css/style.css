@@ -2289,6 +2289,12 @@ border-color: red green blue yellow */
     align-items: center;
     margin-left: auto;
 }
+.voucher-info span {
+    border: 1px solid #d13d2a;
+    color: #d13d2a;
+    padding: 0 5px;
+    margin-top: 5px;
+}
 .voucher-icon {
     width: 24px;
     height: 24px;
@@ -3281,6 +3287,7 @@ border-color: red green blue yellow */
     font-weight: 400;
 }
 
+<<<<<<< HEAD
 .spanall {
     color: var(--light-btn-primary-color);
 }
@@ -3745,4 +3752,1021 @@ user agent stylesheet a:-webkit-any-link {
     -moz-user-select: none;
     user-select: none;
     padding: 0 5px;
+=======
+/* user profile */
+.profile-header {
+    padding: 20px 0;
+}
+.avatar-placeholder img {
+    width: 40px;
+    height: 40px;
+}
+.profile-header {
+    display: flex;
+}
+.profile-info {
+    margin-left: 10px;
+    padding: 5px;
+}
+.profile-username {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.profile-edit-link {
+    text-decoration: none;
+    color: #888;
+    font-size: 14px;
+}
+.dropdown-link {
+    display: flex;
+}
+.dropdown-header-- {
+    margin-left: 30px;
+}
+.dropdown-label-3-- {
+    color: #111;
+    font-size: 14px;
+}
+.dropdown-text-- {
+    margin: 4px 0;
+}
+.dropdown-label-3--:hover {
+    color: #e74c3c;
+}
+.dropdown-label-3- {
+    color: #e74c3c;
+    font-size: 14px;
+}
+.freeship-88,
+.user-profile,
+.profile-purchase-order,
+.profile-notifications,
+.profile-voucher-wallet,
+.profile-coin {
+    width: 20px;
+    height: 20px;
+}
+.dropdown-label {
+    color: #111;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.dropdown-link {
+    text-decoration: none;
+}
+.dropdown-text {
+    align-items: center;
+    justify-content: center;
+}
+.dropdown {
+    margin-top: 10px;
+}
+/* Container cho các tab */
+.tabs-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.tab-item {
+    display: flex; /* Sử dụng flexbox để căn giữa nội dung trong tab */
+    justify-content: center; /* Căn giữa chữ theo chiều ngang */
+    align-items: center; /* Căn giữa chữ theo chiều dọc */
+    flex: 1 1 auto; /* Các tab chiếm đều chiều rộng có sẵn */
+    padding: 10px;
+    text-align: center; /* Căn giữa chữ theo chiều ngang */
+    text-decoration: none; /* Xóa gạch chân khỏi liên kết */
+    color: #000; /* Màu chữ của tab */
+    border-bottom: 1px solid #fff; /* Đường viền của tab */
+    font-size: 14px; /* Kích thước chữ */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột qua tab */
+}
+
+/* Định dạng cho tab đang hoạt động */
+.tab-item.active {
+    background-color: #fff;
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* Nội dung của các tab */
+.tab-content {
+    display: none; /* Ẩn nội dung của các tab theo mặc định */
+    background-color: #fff;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/* Hiển thị nội dung của tab đang được chọn */
+.tab-content.active {
+    display: block; /* Hiển thị nội dung của tab đang hoạt động */
+}
+.app-profile {
+    background-color: #f5f5f5;
+}
+
+/* Toàn bộ phần chứa thông báo không có đơn hàng */
+.no-orders-section {
+    display: flex; /* Sử dụng flexbox để căn giữa phần tử con */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao phần tử chứa bằng chiều cao của viewport */
+    width: 100%; /* Chiều rộng phần tử chứa bằng chiều rộng của phần tử chứa */
+}
+
+/* Wrapper chứa biểu tượng và thông báo */
+.no-orders-wrapper {
+    text-align: center; /* Căn giữa chữ */
+}
+
+/* Biểu tượng thông báo không có đơn hàng */
+.no-orders-icon {
+    width: 100px; /* Kích thước biểu tượng */
+    height: 100px; /* Kích thước biểu tượng */
+    background-image: url("../../../../react-shoppee/public/assets/img/profile/donhang.png"); /* Đường dẫn đến hình ảnh */
+    background-position: 50% 50%; /* Căn giữa hình nền */
+    background-repeat: no-repeat; /* Không lặp lại hình nền */
+    background-size: contain; /* Điều chỉnh kích thước hình nền để vừa với phần tử */
+    display: block; /* Hiển thị phần tử như một khối */
+    margin: 0 auto; /* Căn giữa phần tử trong container */
+}
+
+/* Thông báo không có đơn hàng */
+.no-orders-message {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font chữ */
+    font-size: 16px; /* Kích thước chữ */
+    color: rgba(0, 0, 0, 0.8); /* Màu chữ với độ trong suốt */
+    line-height: 1.5; /* Chiều cao dòng */
+    margin-top: 10px; /* Khoảng cách trên của thông báo */
+}
+.dropdown-label-3 {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.dropdown-label:hover {
+    color: #e74c3c;
+}
+/* Container for profile page */
+.profile-container- {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.profile-main- {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.profile-header- {
+    padding: 20px;
+}
+
+.header-title- {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: normal;
+    flex: 2;
+}
+.titlea {
+    text-align: end;
+    flex: 2;
+    font-size: 18px;
+    font-weight: normal;
+    color: #888888;
+}
+.subtitle- {
+    font-size: 14px;
+    color: #888888;
+}
+
+/* Form Section */
+.profile-form- {
+    padding: 20px;
+    display: flex;
+}
+
+.form-content- {
+    margin-bottom: 20px;
+    flex: 2;
+}
+
+.profile-table- {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.label-column- {
+    width: 30%;
+    padding: 10px;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+}
+.email-,
+.phone-,
+.dob {
+    font-size: 14px;
+}
+.input-column- {
+    width: 70%;
+    padding: 10px;
+}
+
+.username-wrapper-,
+.name-wrapper-,
+.email-wrapper-,
+.phone-wrapper-,
+.dob-wrapper- {
+    display: flex;
+    align-items: center;
+}
+
+.username- {
+    font-size: 16px;
+}
+
+.edit-btn- {
+    background: none;
+    border: none;
+    color: #0056b3;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.name-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e74c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.inner-circle {
+    width: 8px;
+    height: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    position: absolute;
+    visibility: hidden;
+}
+.radio-option[aria-checked="true"] .inner-circle {
+    visibility: visible;
+}
+
+.radio-label- {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/* Buttons */
+.save-btn-,
+.choose-btn {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.choose-btn:hover {
+    background-color: #eee;
+}
+.save-btn-:hover {
+    background-color: #ef6d5f;
+}
+.choose-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 1px 0px;
+    color: rgb(85, 85, 85);
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 40px;
+    padding: 0 20px;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.file-input- {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hide the input but keep it functional */
+}
+
+.choose-btn span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px; /* Match the height of the button */
+}
+
+.file-info- {
+    font-size: 12px;
+    color: #888888;
+}
+
+.file-size-,
+.file-format- {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+/* Profile Picture Section */
+.profile-picture- {
+    padding: 20px;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+}
+
+.picture-header- {
+    margin-bottom: 10px;
+}
+
+.picture-background- {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.choose-btn {
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.header-title-card {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.header-title-carda {
+    display: flex;
+}
+.header-title-card- {
+    margin-top: 20px;
+    display: flex;
+    border-top: 1px solid #d0e2f0;
+    padding-top: 20px;
+}
+.button-card-tittle {
+    border: none;
+    background-color: rgb(238, 77, 45);
+    padding: 10px;
+}
+
+.button-card-tittle span {
+    margin-left: 5px;
+}
+.button-card-tittle span,
+.button-card-tittle i {
+    font-size: 14px;
+    color: #fff;
+}
+
+.bacc-centered-msg {
+    display: flex; /* Sử dụng Flexbox để căn giữa */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    height: 250px; /* Chiều cao cố định */
+    text-align: center; /* Căn giữa văn bản theo chiều ngang (dành cho trường hợp văn bản nhiều dòng) */
+    color: rgb(85, 85, 85); /* Màu chữ */
+    font-size: 18px; /* Kích thước chữ */
+}
+/* Container for the toggle switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+}
+
+/* Hide the default checkbox */
+.toggle-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Style the toggle slider */
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 14px;
+    transition: 0.4s;
+}
+
+/* Inner slider to show ON state */
+.toggle-label .toggle-inner {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+    right: 24px;
+    background-color: #30b566;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+/* Slider circle */
+.toggle-label .toggle-switch {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Checked state styles */
+.toggle-input:checked + .toggle-label .toggle-inner {
+    left: 20px;
+    right: 4px;
+}
+
+.toggle-input:checked + .toggle-label .toggle-switch {
+    left: 22px;
+}
+
+/* Focus state styles */
+.toggle-input:focus + .toggle-label {
+    box-shadow: 0 0 1px #30b566;
+}
+/* Notification item styles */
+.notification-item {
+    display: flex;
+    align-items: center; /* Căn chỉnh theo chiều dọc */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.notification-container- {
+    border-top: 1px solid #dcdcdc;
+}
+.notification-content {
+    display: flex;
+    justify-content: space-between; /* Đẩy nội dung và switch ra hai bên */
+    width: 100%;
+    align-items: center;
+}
+
+.notification-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-title {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 4px; /* Thêm khoảng cách giữa tiêu đề và mô tả */
+}
+
+.notification-description {
+    font-size: 14px;
+    color: #999;
+}
+/* Container for password reset form */
+.password-reset-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Group for each password field */
+.password-field-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* Container for field label */
+.field-label-container {
+    flex-shrink: 0;
+    margin-right: 16px;
+    width: 150px; /* Adjust as needed */
+}
+
+/* Style for field labels */
+.field-label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Container for the input and button */
+.field-input-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Wrapper for input and button */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Adjust as needed */
+}
+
+/* Style for password input field */
+.password-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Style for toggle button to show/hide password */
+.toggle-password-visibility-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* Icon in toggle button */
+.toggle-icon {
+    width: 20px;
+    height: 10px;
+}
+
+/* Container for action buttons */
+.action-buttons {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 165px;
+}
+
+/* Container for submit button */
+.action-button-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for submit button */
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ee4d2d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style for disabled submit button */
+.submit-button.disabled {
+    background-color: rgb(250, 202, 192);
+    cursor: not-allowed;
+}
+.address-list,
+.header-title {
+    padding-top: 10px;
+    font-size: 16px;
+    color: #000;
+}
+.address-header-content {
+    display: flex;
+    flex: 3;
+}
+.address-phone {
+    margin-left: 10px;
+    border-left: 1px solid #b0b0b0;
+    color: #777;
+    padding-left: 10px;
+}
+.address-actions {
+    text-align: end;
+}
+.update-button,
+.delete-button {
+    border: none;
+    background: none;
+    color: #0056b3;
+}
+.address-detail-content {
+    flex: 3;
+}
+.set-default-button {
+    border: 1px solid #ccc;
+}
+.address-info {
+    display: flex;
+    justify-content: flex-start;
+}
+.default-label {
+    border: 1px solid #ee4d2d;
+    color: #ee4d2d;
+}
+.address-item {
+    margin-top: 10px;
+}
+.order-title-noti {
+    font-weight: normal;
+    font-size: 18px;
+}
+.dropdown-container-noti {
+    display: flex;
+    flex-direction: row; /* Hoặc column nếu bạn muốn xếp chồng theo chiều dọc */
+    justify-content: space-between; /* Hoặc sử dụng space-around, space-evenly, etc. */
+    align-items: center; /* Hoặc sử dụng flex-start, flex-end, etc. */
+    max-width: 100%; /* Giới hạn chiều rộng tối đa */
+    overflow: hidden; /* Ẩn phần nội dung tràn ra */
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào tổng chiều rộng/chiều cao */
+}
+.detail-button {
+    border: 1px solid #e0e0e0;
+    background: none;
+    font-size: 14px;
+}
+.icon-wrapper,
+.order-action-noti {
+    flex: 1; /* Điều chỉnh không gian dành cho từng phần tử con */
+    min-width: 0; /* Đảm bảo các phần tử co giãn chính xác */
+    text-align: center;
+    margin-bottom: 20px;
+}
+.order-details-noti {
+    flex: 4; /* Điều chỉnh không gian dành cho từng phần tử con */
+    min-width: 0; /* Đảm bảo các phần tử co giãn chính xác */
+}
+.img-order-notification {
+    max-width: 100px; /* Giới hạn kích thước hình ảnh */
+    height: auto;
+}
+
+.order-title-noti {
+    white-space: nowrap; /* Đảm bảo nội dung không bị ngắt dòng */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Thêm dấu ba chấm nếu nội dung quá dài */
+}
+.order-description-noti,
+.order-time-noti {
+    white-space: nowrap; /* Đảm bảo nội dung không bị ngắt dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+.dropdown-icon-noti,
+.order-action-not {
+    flex: 1;
+}
+.order-details-not {
+    flex: 2;
+}
+.dropdown-icon-noti {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Đảm bảo phần tử cha có chiều cao để căn giữa */
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Đảm bảo phần tử con chiếm toàn bộ chiều rộng cha */
+    height: 100%; /* Đảm bảo phần tử con chiếm toàn bộ chiều cao cha */
+}
+
+.order-notification {
+    padding: 0 20px 5px;
+}
+.order-notification-container {
+    height: 400px; /* Tăng chiều cao của container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-status-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.order-status-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-image-wrapper {
+    margin-bottom: 10px; /* Khoảng cách giữa hình ảnh và thông điệp */
+}
+
+.order-image {
+    width: 100px; /* Hoặc giá trị khác tùy bạn */
+    height: 100px; /* Hoặc giá trị khác tùy bạn */
+    object-fit: contain;
+}
+
+.no-info-message {
+    text-align: center;
+    /* Thêm style cho message nếu cần */
+}
+.voucher-links {
+    display: flex;
+}
+.voucher-wallet-section,
+.voucher-wallet-section-code {
+    padding: 20px;
+}
+
+.voucher-wallet-section,
+.voucher-wallet-links {
+    display: flex;
+}
+.voucher-wallet-title {
+    flex: 2;
+    font-size: 20px;
+}
+.voucher-wallet-links {
+    flex: 1;
+    margin-left: 120px;
+}
+.voucher-wallet-link-item {
+    font-size: 15px;
+    border-right: 1px solid #d0e2f0;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+.voucher-wallet-link-item- {
+    font-size: 15px;
+}
+.voucher-wallet-link {
+    text-decoration: none;
+    color: #e74c3c;
+}
+.voucher-wallet-link-1 {
+    text-decoration: none;
+    color: #999;
+}
+.voucher-wallet-section-code {
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung trong phần tử */
+}
+
+.voucher-code-section {
+    display: flex;
+    align-items: center; /* Căn giữa theo trục dọc */
+    gap: 1rem; /* Khoảng cách giữa các phần tử */
+    max-width: 600px; /* Đặt chiều rộng tối đa nếu cần */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử chứa */
+}
+
+.voucher-code-title {
+    font-size: 17px;
+    margin-right: 1rem; /* Khoảng cách giữa tiêu đề và phần nhập mã */
+}
+
+.voucher-code-input-wrapper {
+    flex: 1; /* Chiếm không gian còn lại */
+}
+
+.voucher-code-input-container {
+    width: 100%;
+}
+
+.voucher-code-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 15px;
+}
+
+.voucher-code-save-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.voucher-code-save-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+.voucher-wallet-code- {
+    padding: 20px;
+}
+.tab-label {
+    font-size: 18px;
+}
+.vouchers-wallet-contai {
+    display: flex;
+    flex-direction: row; /* Sắp xếp các thẻ voucher theo chiều ngang */
+    flex-wrap: wrap; /* Cho phép các thẻ voucher chuyển xuống hàng nếu không đủ không gian */
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+    align-items: flex-start; /* Căn chỉnh các thẻ voucher theo phía trên */
+    justify-content: center; /* Căn giữa các thẻ voucher */
+}
+
+.voucher-card {
+    display: flex;
+    flex-direction: row; /* Các phần tử bên trong thẻ voucher nằm ngang */
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Đặt chiều rộng của mỗi thẻ voucher */
+    margin: 10px; /* Khoảng cách giữa các thẻ voucher */
+}
+
+.voucher-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Các phần tử bên trong phần bên trái sắp xếp theo chiều dọc */
+    align-items: center;
+    justify-content: center;
+    background-color: #ee4d2d;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    height: 125px;
+}
+
+.voucher-logo {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.voucher-logo-text {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.voucher-right {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.voucher-title {
+    font-size: 14px;
+    color: #666;
+}
+
+.voucher-subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+.voucher-info {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.voucher-expiry {
+    font-size: 12px;
+    color: #999;
+    float: left;
+    margin-right: 5px;
+}
+
+.voucher-conditions {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.voucher-action {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.voucher-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #d13d2a;
+    background-color: #fff;
+    border: 1px solid #d13d2a;
+    transition: background-color 0.3s;
+}
+/* Container chính */
+.voucher-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa tất cả các phần tử bên trong */
+    justify-content: center;
+    padding: 20px;
+    height: 400px;
+}
+
+/* Container chứa hình ảnh và thông điệp */
+.voucher-content {
+    text-align: center; /* Căn giữa nội dung văn bản */
+    margin-bottom: 20px;
+}
+
+/* Hình ảnh voucher */
+.voucher-image-container {
+    margin-bottom: 15px;
+}
+
+.voucher-image {
+    max-width: 150px; /* Đặt kích thước tối đa cho hình ảnh */
+    height: auto; /* Đảm bảo tỷ lệ khung hình không bị thay đổi */
+}
+
+/* Thông điệp không có voucher */
+.no-voucher-text {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Đề xuất tìm voucher thêm */
+.suggestion-text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Nút tìm thêm voucher */
+.find-voucher-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ee4d2d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.find-voucher-button:hover {
+    background-color: #d13d2a;
+}
+
+.find-voucher-text {
+    font-weight: bold;
+>>>>>>> origin/main
 }
