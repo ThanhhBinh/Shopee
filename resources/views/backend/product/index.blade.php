@@ -39,6 +39,8 @@
                             <th class="text-center" style="width:30px">#</th>
                             <th class="text-center" style="width:90px">Hình</th>
                             <th>Tên sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Giảm giá</th>
                             <th>Danh mục</th>
                             <th>Thương hiệu</th>
                             <th class="text-center" style="width:200px">Chức năng</th>
@@ -59,6 +61,8 @@
                                         alt="{{ $row->image }}">
                                 </td>
                                 <td>{{ $row->product_name }}</td>
+                                <td>{{ $row->price }}</td>
+                                <td>{{ $row->discount }}</td>
                                 <td>{{ $row->categoryname }}</td>
                                 <td>{{ $row->brandname }}</td>
                                 <td class="text-center" style="width:220px">

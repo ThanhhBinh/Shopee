@@ -49,7 +49,7 @@
             <tbody>
                 @foreach ($list as $row)
                 @php
-                  $args = ['id' => $row->user_id]
+                  $args = ['user_id' => $row->user_id]
                 @endphp
                 <tr>
                     <td class="text-center">
@@ -61,7 +61,15 @@
                     <td>{{ $row->email }}</td>
                     <td>{{ $row->roles }}</td>
                     <td class="text-center">
-                      
+                      @if ($row->status == 1)
+                                    <a href="{{ route('admin.user.status', $args ) }}" class="btn btn-sm btn-success">
+                                        <i class="fas fa-toggle-on"></i>
+                                    </a>
+                                    @else
+                                    <a href="{{ route('admin.user.status', $args ) }}" class="btn btn-sm btn-danger">
+                                      <i class="fas fa-toggle-off"></i>
+                                    </a>
+                                    @endif
                       <a href="{{ route('admin.user.show', $args ) }}" class="btn btn-sm btn-info">
                           <i class="fas fa-eye"></i>
                       </a>

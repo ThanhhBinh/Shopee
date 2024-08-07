@@ -17,9 +17,9 @@ class ShippingController extends Controller
         
         return view("backend.shipping.index",compact('list'));
     }
-    public function show(string $shopping_id)
+    public function show(string $id)
     {
-        $shipping = Shipping::where('shopping_id', $shopping_id)->first();
+        $shipping = Shipping::find($id);
         if($shipping ==  null)
         {
             return redirect()->route('admin.shipping.index');
@@ -64,5 +64,16 @@ class ShippingController extends Controller
         ->get();
         
         return view('backend.shipping.create',compact('list'));
+    }
+    public function status (string $id)
+    {
+        $shipping = Shipping::find($id);
+        if ($shipping == null) {
+            return redirect()->route('admin.shipping.index');
+        }
+        $shipping->status = ($shipping->status == 1) ? 2: 1;
+        $shipping->updated_at = date('Y-m-d H:i:s');
+        $shipping->save();
+        return redirect()->route('admin.shipping.index');
     }
 }

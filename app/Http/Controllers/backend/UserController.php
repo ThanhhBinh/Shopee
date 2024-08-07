@@ -16,4 +16,25 @@ class UserController extends Controller
         
         return view("backend.user.index",compact('list'));
     }
+    public function show(string $id)
+    {
+        $user = User::find($id);
+        if($user ==  null)
+        {
+            return redirect()->route('admin.user.index');
+        }
+
+        return view("backend.user.show",compact('user'));
+    }
+    public function status (string $id)
+    {
+        $user = User::find($id);
+        if ($user == null) {
+            return redirect()->route('admin.user.index');
+        }
+        $user->status = ($user->status == 1) ? 2: 1;
+        $user->updated_at = date('Y-m-d H:i:s');
+        $user->save();
+        return redirect()->route('admin.user.index');
+    }
 }

@@ -206,14 +206,14 @@ Route::prefix('admin')->group(function(){
     Route::prefix('user')->group(function(){
         Route::get('/', [UserController::class,'index'])->name('admin.user.index');
         Route::get('trash', [UserController::class,'trash'])->name('admin.user.trash');
-        Route::get('show/{id}', [UserController::class,'show'])->name('admin.user.show');
+        Route::get('show/{user_id}', [UserController::class,'show'])->name('admin.user.show');
         Route::get('create', [UserController::class,'create'])->name('admin.user.create');
         Route::post('store', [UserController::class,'store'])->name('admin.user.store');
-        Route::get('edit/{id}', [UserController::class,'edit'])->name('admin.user.edit');
-        Route::put('update/{id}', [UserController::class,'update'])->name('admin.user.update');
-        Route::get('delete/{id}', [UserController::class,'delete'])->name('admin.user.delete');
-        Route::get('restore/{id}', [UserController::class,'restore'])->name('admin.user.restore');
-        Route::get('status/{id}', [UserController::class,'status'])->name('admin.user.status');
-        Route::delete('destroy/{id}', [UserController::class,'destroy'])->name('admin.user.destroy');
+        Route::get('edit/{user_id}', [UserController::class,'edit'])->name('admin.user.edit');
+        Route::put('update/{user_id}', [UserController::class,'update'])->name('admin.user.update');
+        Route::get('delete/{user_id}', [UserController::class,'delete'])->name('admin.user.delete');
+        Route::get('restore/{user_id}', [UserController::class,'restore'])->name('admin.user.restore');
+        Route::get('status/{user_id}', [UserController::class,'status'])->name('admin.user.status');
+        Route::delete('destroy/{user_id}', [UserController::class,'destroy'])->name('admin.user.destroy');
     });
 });

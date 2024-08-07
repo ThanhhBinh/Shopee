@@ -19,7 +19,7 @@ class ProductController extends Controller
         ->join('categories','products.category_id','categories.id')
         ->join('brands','products.brand_id','brands.id')
         ->orderBy('products.created_at','DESC')
-        ->select("products.product_id","products.image","products.product_name","categories.name as categoryname","brands.name as brandname")
+        ->select("products.discount","products.price","products.product_id","products.image","products.product_name","categories.name as categoryname","brands.name as brandname")
         ->get();
         $htmlcategory='';
         $htmlbrand='';

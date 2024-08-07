@@ -37,9 +37,9 @@
                     <thead>
                         <tr>
                             <th class="text-center" style="width:30px">#</th>
-                            <th>Mã giao hàng</th>
-                            <th>Tên giao hàng</th>
-                            <th>Trị giá</th>
+                            <th>Mã vận chuyển</th>
+                            <th>Phương thức vận chuyển</th>
+                            <th>Giá</th>
                             <th class="text-center" style="width:200px">Chức năng</th>
                         </tr>
                     </thead>

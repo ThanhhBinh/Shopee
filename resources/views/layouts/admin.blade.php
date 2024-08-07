@@ -149,12 +149,6 @@
                   <p>Tổng quan</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="fas fa-chart-line nav-icon"></i>
-                  <p>Doanh thu</p>
-                </a>
-              </li>
             </ul>
           </li>
           <li class="nav-item">
