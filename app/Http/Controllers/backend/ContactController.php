@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Str;
 
 class ContactController extends Controller
 {
@@ -54,7 +54,17 @@ class ContactController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $contact = Contact::find($id);
+        if($contact ==  null)
+        {
+            return redirect()->route('admin.contact.index');
+        }
+        $list=Contact::where('status','!=',0)
+        ->orderBy('created_at','DESC')
+        ->get();
+
+       
+        return view("backend.contact.edit",compact('list','contact'));
     }
 
     /**
@@ -62,7 +72,20 @@ class ContactController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $contact = Contact::find($id);
+        if ($contact == null) {
+            return redirect()->route('admin.transaction.index');
+        }
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->message = $request->message;
+        $contact->subject = $request->subject;
+        $contact->status = $request->status;
+        $contact->updated_at = now();
+        $contact->updated_by = Auth::id() ?? 1;
+        $contact->save();
+
+        return redirect()->route('admin.contact.index');
     }
 
     /**

@@ -47,31 +47,40 @@
                     </thead>
                     <tbody>
                         @foreach ($list as $row)
+                            @php
+                                $args = ['id' => $row->id];
+                            @endphp
                             <tr>
                                 <td class="text-center">
-                                    <input type="checkbox" id="checkId" value="{{ $row->id }}" name="checkId[]">
+                                    <input type="checkbox" id="checkId" value="1" name="checkId[]">
                                 </td>
                                 <td>{{ $row->name }}</td>
                                 <td>{{ $row->link }}</td>
                                 <td>{{ $row->type }}</td>
-                                
                                 <td class="text-center" style="width:220px">
-                                    <a href="{{ route('admin.menu.status', $row->id) }}" class="btn btn-sm btn-success">
+                                    @if ($row->status == 1)
+                                    <a href="{{ route('admin.menu.status', $args ) }}" class="btn btn-sm btn-success">
                                         <i class="fas fa-toggle-on"></i>
                                     </a>
-                                    <a href="{{ route('admin.menu.show', $row->id) }}" class="btn btn-sm btn-info">
+                                    @else
+                                    <a href="{{ route('admin.menu.status', $args ) }}" class="btn btn-sm btn-danger">
+                                      <i class="fas fa-toggle-off"></i>
+                                    </a>
+                                    @endif
+                                    <a href="{{ route('admin.menu.show', $args ) }}" class="btn btn-sm btn-info">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="{{ route('admin.menu.edit', $row->id) }}" class="btn btn-sm btn-primary">
+                                    <a href="{{ route('admin.menu.edit', $args ) }}" class="btn btn-sm btn-primary">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="{{ route('admin.menu.delete', $row->id) }}" class="btn btn-sm btn-danger">
+                                    <a href="{{ route('admin.menu.delete', $args ) }}" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
-                                </td>
+                              </td>
                                 <td class="text-center">{{ $row->id }}</td>
                             </tr>
                         @endforeach
+
                     </tbody>
                 </table>
             </div>

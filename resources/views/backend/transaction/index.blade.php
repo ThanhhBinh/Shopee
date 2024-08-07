@@ -21,10 +21,6 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-12 text-right">
-                        <a class="btn btn-sm btn-success" href="{{ route('admin.transaction.create') }}">
-                            <i class="fas fa-plus"></i>
-                            Thêm
-                        </a>
                         <a class="btn btn-sm btn-danger" href="{{ route('admin.transaction.trash') }}">
                             <i class="fas fa-trash-alt"></i>
                             Thùng rác
@@ -46,7 +42,7 @@
                     <tbody>
                         @foreach ($list as $row)
                             @php
-                                $args = ['id' => $row->transaction_id];
+                                $args = ['transaction_id' => $row->transaction_id];
                             @endphp
                             <tr>
                                 <td class="text-center">
@@ -64,11 +60,7 @@
                                   <a href="{{ route('admin.transaction.show', $args ) }}" class="btn btn-sm btn-info">
                                       <i class="fas fa-eye"></i>
                                   </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-primary">
-                                      <i class="fas fa-edit"></i>
-                                  </a>
-                                  <a href=""
+                                  <a href="{{ route('admin.transaction.trash', $args ) }}"
                                       class="btn btn-sm btn-danger">
                                       <i class="fas fa-trash"></i>
                                   </a>

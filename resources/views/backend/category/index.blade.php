@@ -40,7 +40,6 @@
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                   </div>
-
                   <div class="mb-3">
                     <label for="description">Mô tả</label>
                     <textarea name="description" value="{{ old('description') }}" id="description" class="form-control"></textarea>

@@ -46,7 +46,7 @@
                     <tbody>
                         @foreach ($list as $row)
                             @php
-                                $args = ['id' => $row->id];
+                                $args = ['topic_id' => $row->topic_id];
                             @endphp
                             <tr>
                                 <td class="text-center">
@@ -55,22 +55,24 @@
                                 <td>{{ $row->name }}</td>
                                 <td>{{ $row->description }}</td>
                                 <td class="text-center" style="width:220px">
-        
-                                      <a href=""
-                                          class="btn btn-sm btn-success">
-                                          <i class="fas fa-toggle-on"></i>
-                                      </a>
-                                  <a href="" class="btn btn-sm btn-info">
-                                      <i class="fas fa-eye"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-primary">
-                                      <i class="fas fa-edit"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-danger">
-                                      <i class="fas fa-trash"></i>
-                                  </a>
+                                    @if ($row->status == 1)
+                                    <a href="{{ route('admin.topic.status', $args ) }}" class="btn btn-sm btn-success">
+                                        <i class="fas fa-toggle-on"></i>
+                                    </a>
+                                    @else
+                                    <a href="{{ route('admin.topic.status', $args ) }}" class="btn btn-sm btn-danger">
+                                      <i class="fas fa-toggle-off"></i>
+                                    </a>
+                                    @endif
+                                    <a href="{{ route('admin.topic.show', $args ) }}" class="btn btn-sm btn-info">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="{{ route('admin.topic.edit', $args ) }}" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="{{ route('admin.topic.delete', $args ) }}" class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
                               </td>
                                 <td class="text-center">{{ $row->user_id }}</td>
                             </tr>

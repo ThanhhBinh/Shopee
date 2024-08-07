@@ -9,4 +9,5 @@ class Topic extends Model
 {
     use HasFactory;
     protected $table='topics';
+    protected $primaryKey = 'topic_id';
 }
