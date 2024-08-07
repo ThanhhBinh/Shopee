@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>QUẢN LÍ THƯƠNG Hiệu</h1>
+                    <h1>QUẢN LÍ THƯƠNG HIỆU</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -49,36 +49,39 @@
                             @php
                                 $args = ['id' => $row->id];
                             @endphp
-                            <tr>
-                                <td class="text-center">
-                                    <input type="checkbox" id="checkId" value="1" name="checkId[]">
-                                </td>
-                                <td class="text-center">
-                                    <img src="{{ asset('images/brands/' . $row->image) }}"class="img-fluid"
-                                        alt="{{ $row->image }}">
-                                </td>
-                                <td>{{ $row->name }}</td>
-                                <td>{{ $row->description }}</td>
-                                <td class="text-center" style="width:220px">
-        
-                                      <a href=""
-                                          class="btn btn-sm btn-success">
-                                          <i class="fas fa-toggle-on"></i>
-                                      </a>
-                                  <a href="" class="btn btn-sm btn-info">
-                                      <i class="fas fa-eye"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-primary">
-                                      <i class="fas fa-edit"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-danger">
-                                      <i class="fas fa-trash"></i>
-                                  </a>
-                              </td>
-                                <td class="text-center">{{ $row->id }}</td>
-                            </tr>
+                          <tr>
+                            <td class="text-center">
+                                <input type="checkbox" id="checkId" value="1" name="checkId[]">
+                            </td>
+                            <td class="text-center">
+                                <img src="{{ asset('images/brands/'.$row->image)}}" class="img-fluid" alt="{{ $row->image}}">
+                            </td>
+                            <td>{{ $row->name }}</td>
+                            <td>{{ $row->slug }}</td>
+                            <td class="text-center">
+                              @if ($row->status == 1)
+                              <a href="{{ route('admin.brand.status', $args ) }}" class="btn btn-sm btn-success">
+                                  <i class="fas fa-toggle-on"></i>
+                              </a>
+                              @else
+                              <a href="{{ route('admin.brand.status', $args ) }}" class="btn btn-sm btn-danger">
+                                <i class="fas fa-toggle-off"></i>
+                              </a>
+                              @endif
+                              <a href="{{ route('admin.brand.show', $args ) }}" class="btn btn-sm btn-info">
+                                  <i class="fas fa-eye"></i>
+                              </a>
+                              <a href="{{ route('admin.brand.edit', $args ) }}" class="btn btn-sm btn-primary">
+                                  <i class="fas fa-edit"></i>
+                              </a>
+                              <a href="{{ route('admin.brand.delete', $args ) }}" class="btn btn-sm btn-danger">
+                                  <i class="fas fa-trash"></i>
+                              </a>
+                          </td>
+                            <td class="text-center">
+                                {{ $row->id }}
+                            </td>
+                        </tr>
                         @endforeach
 
                     </tbody>

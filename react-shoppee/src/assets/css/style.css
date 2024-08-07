@@ -2941,6 +2941,9 @@ border-color: red green blue yellow */
 .agreement-button {
     text-align: end;
 }
+.agreement-button a {
+    color: #fff;
+}
 .total-amount {
     color: #ff5722;
     font-size: 16px;
@@ -3292,7 +3295,10 @@ border-color: red green blue yellow */
     font-weight: 400;
 }
 
+<<<<<<< HEAD
 /* <<<<<<< HEAD */
+=======
+>>>>>>> a7370c9e419dfe961d7b9770f41708a84fcf30a6
 .spanall {
     color: var(--light-btn-primary-color);
 }
@@ -3758,7 +3764,10 @@ user agent stylesheet a:-webkit-any-link {
     user-select: none;
     padding: 0 5px;
 }
+<<<<<<< HEAD
 /* ======= */
+=======
+>>>>>>> a7370c9e419dfe961d7b9770f41708a84fcf30a6
 /* user profile */
 .profile-header {
     padding: 20px 0;
@@ -4774,4 +4783,13 @@ user agent stylesheet a:-webkit-any-link {
 
 .find-voucher-text {
     font-weight: bold;
+<<<<<<< HEAD
+=======
+}
+.akjsfsa {
+    color: #fff;
+}
+.secondary a {
+    color: #111;
+>>>>>>> a7370c9e419dfe961d7b9770f41708a84fcf30a6
 }

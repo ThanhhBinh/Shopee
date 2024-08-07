@@ -21,10 +21,6 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-12 text-right">
-                        <a class="btn btn-sm btn-success" href="{{ route('admin.order.create') }}">
-                            <i class="fas fa-plus"></i>
-                            Thêm
-                        </a>
                         <a class="btn btn-sm btn-danger" href="{{ route('admin.order.trash') }}">
                             <i class="fas fa-trash-alt"></i>
                             Thùng rác
@@ -49,7 +45,7 @@
                     <tbody>
                         @foreach ($list as $row)
                             @php
-                                $args = ['id' => $row->id];
+                                $args = ['order_id' => $row->order_id];
                             @endphp
                             <tr>
                                 <td class="text-center">
@@ -62,22 +58,21 @@
                                 <td>{{ $row->shipping_method }}</td>
                                 <td>{{ $row->payment_method	 }}</td>
                                 <td class="text-center" style="width:220px">
-        
-                                      <a href=""
-                                          class="btn btn-sm btn-success">
-                                          <i class="fas fa-toggle-on"></i>
-                                      </a>
-                                  <a href="" class="btn btn-sm btn-info">
-                                      <i class="fas fa-eye"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-primary">
-                                      <i class="fas fa-edit"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-danger">
-                                      <i class="fas fa-trash"></i>
-                                  </a>
+                                    @if ($row->status == 1)
+                                    <a href="{{ route('admin.order.status', $args ) }}" class="btn btn-sm btn-success">
+                                        <i class="fas fa-toggle-on"></i>
+                                    </a>
+                                    @else
+                                    <a href="{{ route('admin.order.status', $args ) }}" class="btn btn-sm btn-danger">
+                                      <i class="fas fa-toggle-off"></i>
+                                    </a>
+                                    @endif
+                                    <a href="{{ route('admin.order.show', $args ) }}" class="btn btn-sm btn-info">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="{{ route('admin.order.delete', $args ) }}" class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
                               </td>
                                 <td class="text-center">{{ $row->order_id }}</td>
                             </tr>

@@ -68,10 +68,10 @@
                 <div class="mb-3">
                   <label for="status">Trạng thái</label>
                   <select name="status" id="status" class="form-control">
-                    <option value="2">Chưa xuất bản</option>
-                    <option value="1">Xuất bản</option>
+                      <option value="2" {{ $payment->status == 2 ? 'selected' : '' }}>Chưa xuất bản</option>
+                      <option value="1" {{ $payment->status == 1 ? 'selected' : '' }}>Xuất bản</option>
                   </select>
-                </div>
+              </div>
 
                 <div class="mb-3">
                   <button type="submit" name="create" class="btn btn-success">Cập nhập thương hiệu</button>

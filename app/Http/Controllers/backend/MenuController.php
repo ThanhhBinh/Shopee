@@ -26,7 +26,10 @@ class MenuController extends Controller
      */
     public function create()
     {
-        //
+        $list=Menu::where('status','!=',0)
+        ->orderBy('created_at','DESC')
+        ->get();
+        return view("backend.menu.create",compact('list'));
     }
 
     /**
@@ -165,7 +168,15 @@ class MenuController extends Controller
      */
     public function edit(string $id)
     {
-      
+        $menu = Menu::find($id);
+        if($menu ==  null)
+        {
+            return redirect()->route('admin.menu.index');
+        }
+        $list=Menu::where('status','!=',0)
+        ->orderBy('created_at','DESC')
+        ->get();
+        return view("backend.menu.edit",compact('list','menu'));
     }
 
     /**
@@ -173,7 +184,23 @@ class MenuController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $menu = Menu::find($id);
+        if ($menu == null) {
+            return redirect()->route('admin.menu.index');
+        }
+
+        $menu->id = $request->id;
+        $menu->user_id = $request->user_id;
+        $menu->name = $request->name;
+        $menu->link = $request->link;
+        $menu->type = $request->type;
+
+        $menu->status = $request->status;
+        $menu->updated_at = now();
+        $menu->updated_by = Auth::id() ?? 1;
+        $menu->save();
+
+        return redirect()->route('admin.menu.index');
     }
 
     /**

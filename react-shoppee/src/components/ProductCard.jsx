@@ -6,11 +6,19 @@ const Product = ({ product }) => {
     }
 
     return (
+<<<<<<< HEAD
         <div className="col l-2 m-3 c-6 home-product-item">
             <a
                 className="home-product-item-link"
                 href={`product/${product.product_id}`}
             >
+=======
+        // <div className="col l-2 m-3 c-6 home-product-item">
+        //     <a className="home-product-item-link" href="https://example.com">
+
+        <div className="col l-2-4 m-3 c-6 home-product-item">
+            <a className="home-product-item-link" href="product/2">
+>>>>>>> a7370c9e419dfe961d7b9770f41708a84fcf30a6
                 <div
                     className="home-product-item__img"
                     style={{

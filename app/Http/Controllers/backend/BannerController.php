@@ -7,6 +7,7 @@ use App\Http\Requests\StoreBannerRequest;
 use App\Models\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class BannerController extends Controller
 {
@@ -18,10 +19,6 @@ class BannerController extends Controller
         
         return view("backend.banner.index",compact('list'));
     }
-    public function create()
-    {
-        return view("backend.banner.create");
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -32,12 +29,14 @@ class BannerController extends Controller
         $banner->name = $request->name;
         $banner->description = $request->description;
         $banner->link = $request->link;
-        if ($request->image){
-            $exten = $request->file("image")->extension();
-            if(in_array($exten,["png","jpg","gif","webp"]))
-            {
-                $filename = $banner->slug . "." . $exten;
-                $request->image->move(public_path("images/banners"),$filename);
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $exten = $file->extension();
+            if (in_array($exten, ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
+                // Đảm bảo slug từ banner_id
+                $filename = Str::of($request->banner_id)->slug('-') . '-' . time() . '.' . $exten;
+                // Di chuyển file vào thư mục đúng
+                $file->move(public_path('images/banners'), $filename);
                 $banner->image = $filename;
             }
         }
@@ -47,6 +46,7 @@ class BannerController extends Controller
         $banner->save();
         return redirect()->route('admin.banner.index');
     }
+
 
     /**
      * Display the specified resource.
@@ -94,14 +94,17 @@ class BannerController extends Controller
     $banner->name = $request->name;
     $banner->description = $request->description;
     $banner->link = $request->link;
-    if ($request->hasFile('image')) {
-        $exten = $request->file('image')->extension();
-        if (in_array($exten, ["png", "jpg", "gif", "webp"])) {
-            $filename = $banner->slug . "." . $exten;
-            $request->image->move(public_path("images/banners"), $filename);
-            $banner->image = $filename;
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $exten = $file->extension();
+            if (in_array($exten, ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
+                // Đảm bảo slug từ banner_id
+                $filename = Str::of($request->banner_id)->slug('-') . '-' . time() . '.' . $exten;
+                // Di chuyển file vào thư mục đúng
+                $file->move(public_path('images/banners'), $filename);
+                $banner->image = $filename;
+            }
         }
-    }
     $banner->status = $request->status;
     $banner->updated_at = date('Y-m-d H:i:s');
     $banner->updated_by = Auth::id() ?? 1;
@@ -129,7 +132,7 @@ class BannerController extends Controller
     public function trash()
     {
         $list=Banner::where('status','=',0)
-        ->select("id","image","name","status")
+        ->select("banner_id","description","image","name","status")
         ->orderBy('created_at','DESC')
         ->get();
         return view("backend.banner.trash",compact('list'));

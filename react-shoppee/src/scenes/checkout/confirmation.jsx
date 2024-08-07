@@ -709,7 +709,7 @@ export default function confirmation() {
                                 <div className="product-info-pay">
                                     <img
                                         className="product-image"
-                                        alt="product image"
+                                        alt="product-image"
                                         src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw1ajhd0duxnea_tn"
                                         width={60}
                                         height={40}
@@ -934,7 +934,6 @@ export default function confirmation() {
                                                     className="payment-method-option-info disabled"
                                                     tabIndex={0}
                                                     role="radio"
-                                                    aria-label
                                                     aria-disabled="true"
                                                     aria-checked="false"
                                                 >
@@ -1033,6 +1032,7 @@ export default function confirmation() {
                                                                 <img
                                                                     src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/paymentfe/cb78f1ca161d1694.png"
                                                                     className="card-icon"
+                                                                    alt=""
                                                                 />
                                                             </div>
                                                             <div className="card-details">
@@ -1071,6 +1071,7 @@ export default function confirmation() {
                                                                 <img
                                                                     src="https://spm.susercontent.com/api/v4/50092786/shopee_logo_bucket/static/images/Img_giro_bidv.png"
                                                                     className="card-icon"
+                                                                    alt=""
                                                                 />
                                                             </div>
                                                             <div className="card-details">
@@ -1191,7 +1192,7 @@ export default function confirmation() {
                                         </div>
                                         <div className="agreement-button">
                                             <button className="btn-place-order">
-                                                Đặt hàng
+                                                <a href="/">Đặt hàng</a>
                                             </button>
                                         </div>
                                     </div>

@@ -108,22 +108,24 @@ class ProductController extends Controller
         return view('backend.product.edit', compact('product', 'htmlcategoryid', 'htmlbrandid'));
     }
     public function store(StoreProductRequest $request)
-    {       
+    {
         $product = new Product();
         if ($product == null) {
             return redirect()->route('admin.product.index');
         }
+
         $product->product_name = $request->product_name;
         $product->description = $request->description;
         $product->price = $request->price;
         $product->discount = $request->discount;
+        $product->rating = $request->rating;
         $product->category_id = $request->category_id;
         $product->brand_id = $request->brand_id;
 
         if ($request->hasFile('image')) {
             $exten = $request->file('image')->extension();
             if (in_array($exten, ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
-                $filename = Str::of($request->name)->slug('-') . '.' . $exten;
+                $filename = Str::of($request->product_name)->slug('-') . '-' . time() . '.' . $exten;
                 $request->image->move(public_path('images/products'), $filename);
                 $product->image = $filename;
             }
@@ -147,13 +149,14 @@ class ProductController extends Controller
         $product->description = $request->description;
         $product->price = $request->price;
         $product->discount = $request->discount;
+        $product->rating = $request->rating;
         $product->category_id = $request->category_id;
         $product->brand_id = $request->brand_id;
 
         if ($request->hasFile('image')) {
             $exten = $request->file('image')->extension();
             if (in_array($exten, ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
-                $filename = Str::of($request->name)->slug('-') . '.' . $exten;
+                $filename = Str::of($request->product_name)->slug('-') . '.' . $exten;
                 $request->image->move(public_path('images/products'), $filename);
                 $product->image = $filename;
             }

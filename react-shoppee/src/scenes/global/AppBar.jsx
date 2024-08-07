@@ -81,7 +81,11 @@ export default function AppBar() {
             <ul className="header__nav-list">
                 <li className="header__nav-item header__show-note">
                     <a
+<<<<<<< HEAD
                         href="/notificationOrder"
+=======
+                        href="/NotificationOrder"
+>>>>>>> a7370c9e419dfe961d7b9770f41708a84fcf30a6
                         className="header__nav-item-link"
                     >
                         <i className="header__nav-icon far fa-bell" />
@@ -226,7 +230,11 @@ export default function AppBar() {
                     </a>
                 </li>
                 <li className="header__nav-item header__nav-item--bold">
+<<<<<<< HEAD
                     <a href="/login" className="header__nav-item-link">
+=======
+                    <a href="login" className="header__nav-item-link">
+>>>>>>> a7370c9e419dfe961d7b9770f41708a84fcf30a6
                         Đăng nhập
                     </a>
                 </li>
@@ -240,7 +248,11 @@ export default function AppBar() {
                         href="/profile"
                         className="header__nav-item-link header__nav-item--bold"
                     >
+<<<<<<< HEAD
                         Phan Thanh Bình
+=======
+                        Lục Thiên Phong
+>>>>>>> a7370c9e419dfe961d7b9770f41708a84fcf30a6
                     </a>
                     <ul className="header__nav-user-menu">
                         <li className="header__nav-user-item">

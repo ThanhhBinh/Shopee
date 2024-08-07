@@ -37,42 +37,43 @@
                     <thead>
                         <tr>
                             <th class="text-center" style="width:30px">#</th>
-                            <th>Tên sản phẩm</th>
+                            <th>Mã giao hàng</th>
+                            <th>Tên giao hàng</th>
                             <th>Trị giá</th>
                             <th class="text-center" style="width:200px">Chức năng</th>
-                            <th class="text-center" style="width:30px">ID</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($list as $row)
                             @php
-                                $args = ['id' => $row->id];
+                                $args = ['shipping_id' => $row->shipping_id];
                             @endphp
                             <tr>
                                 <td class="text-center">
                                     <input type="checkbox" id="checkId" value="1" name="checkId[]">
                                 </td>
+                                <td>{{ $row->shipping_id}}</td>
                                 <td>{{ $row->shipping_method}}</td>
                                 <td>{{ $row->cost }}</td>
                                 <td class="text-center" style="width:220px">
-        
-                                      <a href=""
-                                          class="btn btn-sm btn-success">
-                                          <i class="fas fa-toggle-on"></i>
-                                      </a>
-                                  <a href="" class="btn btn-sm btn-info">
-                                      <i class="fas fa-eye"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-primary">
-                                      <i class="fas fa-edit"></i>
-                                  </a>
-                                  <a href=""
-                                      class="btn btn-sm btn-danger">
-                                      <i class="fas fa-trash"></i>
-                                  </a>
-                              </td>
-                                <td class="text-center">{{ $row->id }}</td>
+                                @if ($row->status == 1)
+                                <a href="{{ route('admin.shipping.status', $args ) }}" class="btn btn-sm btn-success">
+                                    <i class="fas fa-toggle-on"></i>
+                                </a>
+                                @else
+                                <a href="{{ route('admin.shipping.status', $args ) }}" class="btn btn-sm btn-danger">
+                                  <i class="fas fa-toggle-off"></i>
+                                </a>
+                                @endif
+                                <a href="{{ route('admin.shipping.show', $args ) }}" class="btn btn-sm btn-info">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="{{ route('admin.shipping.edit', $args ) }}" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                              <a href="{{ route('admin.shipping.delete', $args ) }}" class="btn btn-sm btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </a>
                             </tr>
                         @endforeach
 
