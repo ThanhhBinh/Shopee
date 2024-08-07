@@ -27,7 +27,6 @@ export default function Home() {
                         <Flashsale />
                         <HomeProductNew />
                         <HomeProduct />
-                        {/* <ProductList /> */}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Product from "../../components/ProductCard";
-export default function flashsale() {
+import { productApi } from "../../api/productApi";
+
+const FlashSale = () => {
+    const [flashSaleProducts, setFlashSaleProducts] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchFlashSaleProducts = async () => {
+            try {
+                const response = await productApi.getAll({ flashSale: true });
+                console.log(response.data);
+                setFlashSaleProducts(response.data);
+            } catch (error) {
+                setError("Lỗi khi tải sản phẩm flash sale");
+            }
+        };
+
+        fetchFlashSaleProducts();
+    }, []);
+
     return (
         <div
             className="container"
@@ -30,7 +49,7 @@ export default function flashsale() {
                         FLASH SALE
                     </h1>
                     <a
-                        href="a"
+                        href="/flashsale"
                         style={{
                             textDecoration: "none",
                         }}
@@ -46,7 +65,7 @@ export default function flashsale() {
                                 style={{
                                     marginLeft: "5px",
                                 }}
-                                class="fas fa-chevron-right"
+                                className="fas fa-chevron-right"
                             ></i>
                         </h3>
                     </a>
@@ -58,14 +77,23 @@ export default function flashsale() {
                     id="list-product"
                     className="row sm-gutter"
                 >
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
+                    {error && <p>{error}</p>}
+                    {flashSaleProducts.length === 0 ? (
+                        <p>Đang tải sản phẩm flash sale...</p>
+                    ) : (
+                        flashSaleProducts
+                            .slice(0, 6)
+                            .map((product) => (
+                                <Product
+                                    key={product.product_id}
+                                    product={product}
+                                />
+                            ))
+                    )}
                 </div>
             </div>
         </div>
     );
-}
+};
+
+export default FlashSale;

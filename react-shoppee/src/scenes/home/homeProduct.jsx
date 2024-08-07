@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Product from "../../components/ProductCard";
+import { productApi } from "../../api/productApi";
+import Loading from "../../components/Loading";
 
 export default function HomeProduct() {
+    const [products, setProducts] = useState([]);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchSuggestedProducts = async () => {
+            try {
+                const response = await productApi.getSuggestedProducts({
+                    suggested: true,
+                });
+                setProducts(response.data);
+            } catch (error) {
+                setError("Lỗi khi tải sản phẩm gợi ý");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchSuggestedProducts();
+    }, []);
+
     return (
         <div>
             <div
@@ -41,12 +64,16 @@ export default function HomeProduct() {
                         id="list-product"
                         className="row sm-gutter"
                     >
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
+                        {loading && <Loading />}
+                        {error && !loading && <p>{error}</p>}
+                        {!loading && products.length === 0 && (
+                            <p>Không có sản phẩm nào.</p>
+                        )}
+                        {!loading &&
+                            products.length > 0 &&
+                            products.map((product) => (
+                                <Product key={product.id} product={product} />
+                            ))}
                     </div>
                 </div>
             </div>

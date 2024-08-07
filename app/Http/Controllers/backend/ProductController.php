@@ -13,8 +13,41 @@ use App\Http\Requests\StoreProductRequest;
 
 class ProductController extends Controller
 {
+    // public function getimages()
+    // {
+    //     $list = Product::where('products.status', '!=', 0)
+    //         ->join('image', 'products.id', '=', 'image.product_id') // Nối bảng với điều kiện
+    //         ->select('products.*', 'image.image_name') // Chọn cột cần thiết
+    //         ->whereIn('image.id', function($query) {
+    //             $query->selectRaw('MAX(id)')
+    //                   ->from('image')
+    //                   ->groupBy('product_id');
+    //         }) // Chọn hình ảnh mới nhất
+    //         ->get();
+    
+    //     return response()->json($list);
+    // }
+        public function getNewProducts()
+    {
+        $products = Product::where('status', '!=', 0)
+                        ->orderBy('created_at', 'desc') 
+                        ->limit(6)
+                        ->get();
+        return response()->json($products);
+    }
+    public function getSuggestedProducts()
+    {
+        // Cấu hình truy vấn để lấy sản phẩm gợi ý
+        $products = Product::where('status', '!=', 0)
+                        ->orderBy('created_at', 'desc')
+                        ->limit(12)
+                        ->get();
+                        
+        return response()->json($products);
+    }
     public function index()
     {
+<<<<<<< HEAD
         $list=Product::where('products.status','!=',0)
         ->join('categories','products.category_id','categories.id')
         ->join('brands','products.brand_id','brands.id')
@@ -28,8 +61,25 @@ class ProductController extends Controller
             $htmlcategory.="<option value='".$item->category_id."'>".$item->categoryname."</option>";
             $htmlbrand.="<option value='".($item->brand_id + 1)."'>Sau: ".$item->brandname."</option>";
         }
+=======
+        // $list=Product::where('products.status','!=',0)
+        // ->join('categories','products.category_id','categories.id')
+        // ->join('brands','products.brand_id','brands.id')
+        // ->orderBy('products.created_at','DESC')
+        // ->select("products.product_id","products.image","products.product_name","categories.name as categoryname","brands.name as brandname")
+        // ->get();
+        // $htmlcategory='';
+        // $htmlbrand='';
+        // foreach($list as $item)
+        // {
+        //     $htmlcategory.="<option value='".$item->category_id."'>".$item->categoryname."</option>";
+        //     $htmlbrand.="<option value='".($item->brand_id + 1)."'>Sau: ".$item->brandname."</option>";
+        // }
+>>>>>>> 4ff8e87d430f147e322ac2f58ea500617c742c14
         
-        return view("backend.product.index",compact('list','htmlcategory','htmlbrand'));
+        // return view("backend.product.index",compact('list','htmlcategory','htmlbrand'));
+        $products = Product::all();
+        return response()->json($products);
     }
     public function create()
     {

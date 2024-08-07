@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Product from "../../components/ProductCard";
+import { productApi } from "../../api/productApi";
 
-export default function homeProductNew() {
+export default function HomeProductNew() {
+    const [products, setProducts] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchNewProducts = async () => {
+            try {
+                const response = await productApi.getNewProducts();
+                setProducts(response.data);
+            } catch (error) {
+                setError("Lỗi khi tải sản phẩm");
+            }
+        };
+        fetchNewProducts();
+    }, []);
+
     return (
         <div
             className="container"
@@ -34,7 +50,7 @@ export default function homeProductNew() {
                         TÌM KIẾM HÀNG ĐẦU
                     </h1>
                     <a
-                        href="a"
+                        href="/all-products"
                         style={{
                             textDecoration: "none",
                         }}
@@ -50,7 +66,7 @@ export default function homeProductNew() {
                                 style={{
                                     marginLeft: "5px",
                                 }}
-                                class="fas fa-chevron-right"
+                                className="fas fa-chevron-right"
                             ></i>
                         </h3>
                     </a>
@@ -62,12 +78,14 @@ export default function homeProductNew() {
                     id="list-product"
                     className="row sm-gutter"
                 >
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
+                    {error && <p>{error}</p>}
+                    {products.length === 0 ? (
+                        <p>Đang tải sản phẩm...</p>
+                    ) : (
+                        products.map((product) => (
+                            <Product key={product.id} product={product} />
+                        ))
+                    )}
                 </div>
             </div>
         </div>
