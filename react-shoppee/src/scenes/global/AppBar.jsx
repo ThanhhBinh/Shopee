@@ -81,7 +81,7 @@ export default function AppBar() {
             <ul className="header__nav-list">
                 <li className="header__nav-item header__show-note">
                     <a
-                        href="https://example.com"
+                        href="/notificationOrder"
                         className="header__nav-item-link"
                     >
                         <i className="header__nav-icon far fa-bell" />
@@ -221,36 +221,39 @@ export default function AppBar() {
                     </a>
                 </li>
                 <li className="header__nav-item header__nav-item--bold header__nav-item--separate">
-                    <a
-                        href="https://example.com"
-                        className="header__nav-item-link"
-                    >
+                    <a href="/register" className="header__nav-item-link">
                         Đăng ký
                     </a>
                 </li>
                 <li className="header__nav-item header__nav-item--bold">
-                    <a
-                        href="https://example.com"
-                        className="header__nav-item-link"
-                    >
+                    <a href="/login" className="header__nav-item-link">
                         Đăng nhập
                     </a>
                 </li>
-                {/* <li class="header__nav-item header__nav-user">
-                      <img alt="" alt="" src="./assets/img/user.png" class="header__nav-user-avt">
-                      <a href="https://example.com" class="header__nav-item-link header__nav-item--bold">Lục Thiên Phong</a>
-                      <ul class="header__nav-user-menu">
-                          <li class="header__nav-user-item">
-                              <a href="https://example.com">Tài khoản của tôi</a>
-                          </li>
-                          <li class="header__nav-user-item">
-                              <a href="https://example.com">Đơn mua</a>
-                          </li>
-                          <li class="header__nav-user-item">
-                              <a href="https://example.com">Đăng xuất</a>
-                          </li>
-                      </ul>
-                  </li> */}
+                <li className="header__nav-item header__nav-user">
+                    <img
+                        alt=""
+                        src="./assets/img/user.png"
+                        className="header__nav-user-avt"
+                    />
+                    <a
+                        href="/profile"
+                        className="header__nav-item-link header__nav-item--bold"
+                    >
+                        Phan Thanh Bình
+                    </a>
+                    <ul className="header__nav-user-menu">
+                        <li className="header__nav-user-item">
+                            <a href="/profile">Tài khoản của tôi</a>
+                        </li>
+                        <li className="header__nav-user-item">
+                            <a href="/purchase">Đơn mua</a>
+                        </li>
+                        <li className="header__nav-user-item">
+                            <a href="/login">Đăng xuất</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     );

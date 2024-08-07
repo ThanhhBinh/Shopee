@@ -16,8 +16,14 @@ use App\Http\Controllers\backend\TransactionController;
 use App\Http\Controllers\backend\UserController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', function () {return view('welcome');});
+Route::get('/api', function () {return view('api');});
+Route::prefix('api')->group(function(){
+    Route::get('/products', [ProductController::class, 'index'])->name('api.product');
+    Route::get('/products/new', [ProductController::class, 'getNewProducts'])->name('api.product.new');
+    Route::get('/products/suggested', [ProductController::class, 'getSuggestedProducts'])->name('api.product.suggested');
+
+});
 Route::get('/admin', function () {return view('admin');});
 Route::prefix('admin')->group(function(){
     Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard.index');

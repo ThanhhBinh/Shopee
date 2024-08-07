@@ -6,27 +6,47 @@ export default function Navbar() {
                 <ul id="nav" className="header__menu-list">
                     <li className="header__menu-item">
                         <a className="nav-link" href="a">
-                            Menu 1
+                            Áo Thun Nam Form Rộng
                         </a>
                     </li>
                     <li className="header__menu-item">
                         <a className="nav-link" href="a">
-                            Menu 2
+                            Váy Babydoll
                         </a>
                     </li>
                     <li className="header__menu-item">
                         <a className="nav-link" href="a">
-                            Menu 2
+                            Mũ Bảo Hiểm
                         </a>
                     </li>
                     <li className="header__menu-item">
                         <a className="nav-link" href="a">
-                            Menu 2
+                            Quần Ống Loe
                         </a>
                     </li>
                     <li className="header__menu-item">
                         <a className="nav-link" href="a">
-                            Menu 2
+                            Vòng Cổ
+                        </a>
+                    </li>
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Ghế Lười
+                        </a>
+                    </li>
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Camera
+                        </a>
+                    </li>
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Laptop
+                        </a>
+                    </li>
+                    <li className="header__menu-item">
+                        <a className="nav-link" href="a">
+                            Ví Nam
                         </a>
                     </li>
                 </ul>

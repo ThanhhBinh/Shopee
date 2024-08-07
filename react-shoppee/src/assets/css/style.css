@@ -1430,6 +1430,8 @@ border-color: red green blue yellow */
 
 .header_menu {
     position: relative;
+    width: 840px;
+    margin: auto;
 }
 
 .header__menu-list a {
@@ -1437,6 +1439,9 @@ border-color: red green blue yellow */
     padding: 0;
     margin: 0;
     display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5rem;
 }
 
 .header__menu-item {
@@ -3287,7 +3292,7 @@ border-color: red green blue yellow */
     font-weight: 400;
 }
 
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 .spanall {
     color: var(--light-btn-primary-color);
 }
@@ -3752,7 +3757,8 @@ user agent stylesheet a:-webkit-any-link {
     -moz-user-select: none;
     user-select: none;
     padding: 0 5px;
-=======
+}
+/* ======= */
 /* user profile */
 .profile-header {
     padding: 20px 0;
@@ -4768,5 +4774,4 @@ user agent stylesheet a:-webkit-any-link {
 
 .find-voucher-text {
     font-weight: bold;
->>>>>>> origin/main
 }

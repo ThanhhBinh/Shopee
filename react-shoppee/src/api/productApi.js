@@ -1,15 +1,32 @@
-import axiosClient from "./axiosClient";
+import { axiosInstance } from "./axiosInstance";
 
-const productApi = {
-    getAll: (params) => {
-        const url = "/products";
-        return axiosClient.get(url, { params });
+export const productApi = {
+    getAll(params) {
+        var url = "/products";
+        return axiosInstance.get(url, { params });
     },
-
-    get: (id) => {
-        const url = `/products/${id}`;
-        return axiosClient.get(url);
+    get(id, params) {
+        var url = `/products/${id}`;
+        return axiosInstance.get(url, { params });
+    },
+    add(data) {
+        var url = `/products`;
+        return axiosInstance.post(url, data);
+    },
+    update(id, data) {
+        var url = `/products/${id}`;
+        return axiosInstance.put(url, data);
+    },
+    del(id) {
+        var url = `/products/${id}`;
+        return axiosInstance.delete(url);
+    },
+    getNewProducts() {
+        var url = "/products/new";
+        return axiosInstance.get(url);
+    },
+    getSuggestedProducts() {
+        var url = "/products/suggested";
+        return axiosInstance.get(url);
     },
 };
-
-export default productApi;

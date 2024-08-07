@@ -3,12 +3,19 @@ export default function slider() {
     return (
         <div
             className="col l-8 m-12 c12"
-            style={{ margin: "auto", display: "flex", marginTop: 10 }}
+            style={{
+                margin: "auto",
+                display: "flex",
+                marginTop: "10px",
+            }}
         >
-            <div className="w3-content w3-section col l-8 m-4 c-6">
+            <div
+                className="w3-content w3-section col l-8 m-4 c-6"
+                style={{ padding: "0" }}
+            >
                 <img
                     className="mySlides"
-                    src="./assets/img/pay/2.PNG"
+                    src="./assets/img/home/hinh2.png"
                     alt="a"
                     style={{ width: "100%" }}
                 />
@@ -17,7 +24,7 @@ export default function slider() {
                 <div className="slider-item">
                     <img
                         className="img-right"
-                        src="./assets/img/pay/2.PNG"
+                        src="./assets/img/home/hinh2.png"
                         alt="a"
                         style={{ width: "100%" }}
                     />
@@ -25,7 +32,7 @@ export default function slider() {
                 <div className="slider-item" style={{ marginTop: 5 }}>
                     <img
                         className="img-right"
-                        src="./assets/img/pay/2.PNG"
+                        src="./assets/img/home/hinh2.png"
                         alt="a"
                         style={{ width: "100%" }}
                     />

@@ -1,26 +1,33 @@
 import React from "react";
-export default function Product() {
+import AppUrl from "../api/AppURL";
+const Product = ({ product }) => {
+    if (!product) {
+        return <p>Không có thông tin sản phẩm</p>;
+    }
+
     return (
-<<<<<<< HEAD
         <div className="col l-2 m-3 c-6 home-product-item">
-            <a className="home-product-item-link" href="https://example.com">
-=======
-        <div className="col l-2-4 m-3 c-6 home-product-item">
-            <a className="home-product-item-link" href="product/2">
->>>>>>> origin/main
+            <a
+                className="home-product-item-link"
+                href={`product/${product.product_id}`}
+            >
                 <div
                     className="home-product-item__img"
                     style={{
-                        backgroundImage: "url(./assets/img/home/1.PNG)",
+                        backgroundImage: `url(${AppUrl.ImageUrl}/images/products/${product.image})`,
                     }}
                 />
                 <div className="home-product-item__info">
                     <h4 className="home-product-item__name">
-                        Ổ đĩa flash USB2.0 2TB Hp kim loại chống thấm nước
+                        {product.product_name}
                     </h4>
                     <div className="home-product-item__price">
-                        <p className="home-product-item__price-old">180.000đ</p>
-                        <p className="home-product-item__price-new">200.000đ</p>
+                        <p className="home-product-item__price-old">
+                            {product.price}đ
+                        </p>
+                        <p className="home-product-item__price-new">
+                            {(product.price - product.discount).toFixed(2)}đ
+                        </p>
                         <i className="home-product-item__ship fas fa-shipping-fast" />
                     </div>
                     <div className="home-product-item__footer">
@@ -28,31 +35,38 @@ export default function Product() {
                             <input
                                 type="checkbox"
                                 name="save-check"
-                                id="heart-save"
+                                id={`heart-save-${product.product_id}`}
                             />
                             <label
-                                htmlFor="heart-save"
+                                htmlFor={`heart-save-${product.product_id}`}
                                 className="far fa-heart"
                             />
                         </div>
                         <div className="home-product-item__rating-star">
-                            <i className="star-checked far fa-star" />
-                            <i className="star-checked far fa-star" />
-                            <i className="star-checked far fa-star" />
-                            <i className="star-checked far fa-star" />
-                            <i className="star-checked far fa-star" />
+                            {[...Array(5)].map((_, index) => (
+                                <i
+                                    key={index}
+                                    className={`star-checked far fa-star ${
+                                        index < Math.round(product.rating)
+                                            ? "checked"
+                                            : ""
+                                    }`}
+                                />
+                            ))}
                         </div>
                         <div className="home-product-item__saled">
-                            Đã bán 3,8k
+                            Đã bán {product.product_stock}
                         </div>
                     </div>
-                    <div className="home-product-item__origin">Hà Nội</div>
+                    <div className="home-product-item__origin">
+                        {product.product_stock}
+                    </div>
                     <div className="home-product-item__favourite">
                         Yêu thích
                     </div>
                     <div className="home-product-item__sale-off">
                         <div className="home-product-item__sale-off-value">
-                            40%
+                            {product.discount}%
                         </div>
                         <div className="home-product-item__sale-off-label">
                             GIẢM
@@ -65,4 +79,6 @@ export default function Product() {
             </a>
         </div>
     );
-}
+};
+
+export default Product;

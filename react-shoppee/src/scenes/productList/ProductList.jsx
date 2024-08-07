@@ -3,28 +3,30 @@ import ProductBox from "../../components/ProductBox";
 import CategoryMenu from "./CategoryMenu";
 import Filter from "./Filter";
 import Paginate from "../../components/Paginate";
-import axios from "axios";
+import { productApi } from "../../api/productApi";
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
+    const [pageNum, setPageNum] = useState(1);
 
     useEffect(() => {
-        axios
-            .get("http://localhost:8000/admin/product")
-            .then((response) => {
-                // Cập nhật state với dữ liệu từ server
-                setProducts(response.data);
-            })
-            .catch((error) => {
-                // Xử lý lỗi
-                setError("Có lỗi xảy ra khi tải sản phẩm.");
-                console.error(
-                    "There was an error fetching the products!",
-                    error
-                );
-            });
-    }, []);
+        const fetchData = async () => {
+            try {
+                const params = { page: pageNum };
+                const response = await productApi.getAll(params);
+                if (Array.isArray(response.data)) {
+                    setProducts(response.data);
+                } else {
+                    setProducts([]);
+                    setError("Dữ liệu trả về không đúng định dạng.");
+                }
+            } catch (error) {
+                setError("Lỗi khi tải sản phẩm");
+            }
+        };
+        fetchData();
+    }, [pageNum]);
 
     return (
         <div className="container">
@@ -47,8 +49,8 @@ const ProductList = () => {
                             ) : (
                                 <ul>
                                     {products.map((product) => (
-                                        <li key={product.id}>
-                                            <h2>{product.name}</h2>
+                                        <li key={product.product_id}>
+                                            <h2>{product.product_name}</h2>
                                             <p>Giá: {product.price} VNĐ</p>
                                         </li>
                                     ))}

@@ -6,7 +6,7 @@ export default function Banner() {
                 <i className="header__mobile-search-icon fas fa-search" />
             </label>
             <div className="header__logo">
-                <a href="https://example.com" className="header__logo-link">
+                <a href="/" className="header__logo-link">
                     <img
                         alt=""
                         src="./assets/img/logo/logo-full-white.png"
